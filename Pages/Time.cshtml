@@ -1,0 +1,16 @@
+@page
+@model TimeModel
+@{
+    ViewData ["Title"] = "Time Page";
+}
+<div class="text-center">
+  <p>Time: @DateTime.Now</p>
+  <p>@Model.Message</p>
+  <ul>
+    @* Loop through each lucky number and display it *@
+    @foreach (var number in Model.LuckyNumbers)
+    {
+        <li>Lucky Number: @number</li>
+    }
+  </ul>
+</div>
